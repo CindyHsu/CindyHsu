@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>醫師介紹</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional">
+    <link rel="stylesheet" href="CSS/AboutDoctor.css">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <nav class="show_desktop d-flex justify-content-center"> 
+      <ul class="d-flex show_desktop">
+        <a href="./index copy.html" class=""><img class="logo"src="pics/logo.svg" alt=""></a>
+          <li class="show_desktop"><a href="./AboutClinic.html">診所介紹</a></li>
+          <li class="show_desktop"><a href="./AboutDoctor.html">醫師介紹</a></li>
+          <li class="show_desktop"><a href="#tehrapy-items">醫療項目</a></li>
+          <li class="show_desktop"><a href="">門診時間</a></li>
+      </ul> 
+    </nav>  
+    
+    <div class="show_mobile">
+      <div class=" d-flex justify-content-between">
+      <a href="./index copy.html" class=""><img class="logo2"src="pics/logo.svg" alt=""></a>
+       <div class="wrapper-menu">
+        <div class="menu transition" >
+          <div class="bar bar1 transition"></div>
+          <div class="bar bar2 transition"></div>
+          <div class="bar bar3 transition"></div>
+          <ul class="transition">
+            <li><a href="./AboutClinic.html" class="transition">診所介紹</a></li>
+            <li><a a href="./AboutDoctor.html" class="transition">醫師介紹</a></li>
+            <li><a  class="transition">醫療項目</a></li>
+            <li><a class="transition">門診時間</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+      <!-- 醫師介紹 -->
+      <section class="about-doctor container position-relative">
+        <div class="wrapper d-flex justify-content-between align-items-center">
+          <img src="./images/醫師介紹.jpg" alt="">
+          <div class="box position-relative">
+              <div class="about-dictor-text position-absolute">
+              <h5>About Doctor</h5>
+              <h1>醫師<br/>介紹</h1><br>
+              <h6>學歷 | 中醫師特考</h6>
+              <h6>中國醫藥學院針灸班</h6>
+              <h6>經歷 | 行醫35年</h6>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 秉持的精神 -->
+      <section class="spiritural">
+          <div class="wrapper d-flex justify-content-between flex-end">
+           <img class="pic-1" src="./images/針灸.jpg" alt="">
+           <div class="wrapper-right">
+            <h5>About Doctor</h5>
+            <h1>秉持的精神</h1>
+            <p>科學中醫將古人精髓<br/>流傳於現代生活<br/> 用天然草本治療身心</p>
+            <img class="pic-2" src="./images/把脈.jpg" alt="">
+           </div>
+          </div>
+      </section>
+
+       <!--Footer-->
+       <div class="box">
+        <div class="info-wrapper d-flex container justify-content-between align-items-center flex-center">
+        <a href="/" class=""><img class="logo-wite" src="./pics/欣佑logo-wite-直.svg" alt=""></a>
+        <div class="info">
+        <p>地址  ｜  台北市信義區松山路244號</br>電話  ｜  (02) 2763 5193</p><p>營業時間  ｜ </br>週一 ~ 週五 14:00pm - 22:00pm</br>週六 14:00pm - 20:00pm</p>
+       </div>
+       </div> 
+    </div>  
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+      // 選單fixed //
+      let navPosition=$("nav").offset().top;
+       // console.log($("nav").offset())
+       $(window).on("scroll", function(){
+                let scrollTop=$(this).scrollTop();
+                console.log(scrollTop)
+                if(scrollTop>navPosition){
+                    $("nav").addClass("active")
+                }else{
+                    $("nav").removeClass("active")
+                }
+              })
+         // ======================= Menu ================================//
+    $(".menu").click(function(){
+        $(this).toggleClass("active")
+    })      
+        </script>
+  </body>
+</html>

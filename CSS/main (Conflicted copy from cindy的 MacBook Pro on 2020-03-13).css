@@ -1,0 +1,278 @@
+    * {
+        box-sizing: border-box;
+    }
+    /* 公用 */
+    body{
+        background: rgb(255, 255, 255);
+        font-family:'Noto Sans TC', sans-serif;
+    }
+    nav{
+        background: #fff;
+    }
+    .container{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    h1{
+        color:#82C28F;
+        font-size: 80px;
+        letter-spacing: 10px;
+        margin: 0 auto 15px;
+    }
+    h4{
+        color: #666666;
+        letter-spacing: 3px;
+        line-height: 30px;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .d-flex{
+        display: flex;
+    }
+    .align-items-center {
+        -ms-flex-align: center !important;
+        align-items: center !important;
+      }
+
+    .justify-content-center{
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+    }
+      
+    .d-inline-block{
+        display: inline-block;
+    }
+    /* Header */
+    .logo{
+        height: 50px;
+        margin: 30px;
+    }
+    nav .container{
+        justify-content: space-between;
+    }
+    nav ul, nav ul li{
+        margin:0 0 0 56px;
+        padding:0;
+    }
+    nav ul li{
+        list-style: none;
+    }
+    nav ul li a{
+        height: 100px;
+        vertical-align: middle;
+        padding:4px 10px;
+        text-decoration: none;
+        color:#595757;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+    }
+    nav ul li a:hover{
+        color: #319377;
+        text-decoration: none;
+    }
+    .btn{
+        font-size: 20px;
+        border: 2px solid #FFAF5E;
+        border-radius: 30px;
+        padding: 5px 20px;
+        margin: 20px 0;
+        color: #FFAF5E;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    }
+     /*================================================= 主視覺頁 =========================*/
+     .banner{
+         max-width:1400px;
+         height: 700px;
+         margin: 0 auto;
+     }
+     .banner .box{
+        background: #82C28F;
+        height: 559px;
+        width: 855px;
+        font-family: 'Noto Sans TC', sans-serif;
+        top: 44px;
+        left: calc(50% - 700px);
+        position: absolute;
+     }
+     .banner .box p{
+         color: #fff;
+         letter-spacing: 2px;
+         position: absolute;
+         bottom: 13px;
+         left:240px;
+     }
+     /* 幻燈片 */
+     .banner .wrapper{
+        width: 975px;
+        right: 0;
+     }
+     .banner .slider-wrap{
+        height: 600px;
+        background: #000;
+        top: 102px;
+    }
+    .banner .slider-image{
+        width: 2925px;
+        height: 600px;
+        transition: .5s;
+        
+        /* left: -800px; */
+    }
+    .banner .slider-image li{
+        /* flex-basis: 0;
+        flex-grow: 1; */
+        flex: 1 0 0;
+    }
+    .banner .slider-image img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .banner .slider-point{
+        bottom: 0px;
+        left:0;
+        width: 100%;
+    }
+    .banner .slider-point li{
+        border: 1px solid #fff;
+        height: 10px;
+        width: 24px;
+        margin: 0 3px;
+    }
+    /* .slider-point li:hover{
+        background: #fff;
+    } */
+    .banner h1{
+        position: absolute;
+        z-index:1;
+        color: #fff;
+        font-size: 6.5rem;
+        font-family: 'Noto Sans TC', sans-serif,'700';
+        margin-top: 87px;
+        margin-left: 51px;
+        letter-spacing: 20px;
+        line-height: 9rem;
+    }
+    /* 帶修改 */
+    .banner h1::after{
+        position: absolute;
+        content: "";
+        width: 600px;
+        height: 6px;
+        background: #fff;
+        right: 0;
+        top: 0;
+    }
+
+   /* ===========================主治項目============================ */
+   .page_section{
+    padding: 150px 0;
+    max-width: 1440px;
+    margin: 0 auto;
+   }
+   .page_section .wrapper{
+       width: 100%;
+       height: 140px;
+   }
+   .page_section h5{
+     color:#82C28F;
+     margin: 0px auto;
+   }
+   .page_section h1::after{
+    position: absolute;
+    content: "";
+    width: 218px;
+    height: 6px;
+    left: calc(50% - 109px);
+    bottom: 0;
+    background: #82C28F; 
+}
+.page_section img{
+    width: 150px;
+    margin: 10px 50px;
+}  
+.page_section .icon{
+    margin: 70px auto;
+}
+.icon h5{
+   color: #FFAF5E;
+}
+ /* ===========================醫師介紹&關於診所============================ */   
+ .page_section-2{
+  max-width: 1400px;
+  height: 1500px;
+  margin: 0 auto;
+ }
+ .page_section-2 .box{
+     background: #E6E6E6;
+     width: 295px;
+     height: 1150px;
+     left: calc(50% - 20px);
+     top:50px;
+ }
+ .page_section-2 .box2{
+    background: #82C28F;
+    width: 295px;
+    height: 1150px;
+}
+.page_section-2 .box2 p{
+    color: #fff;
+    font-size: 80px;
+    letter-spacing: 10px;
+    right: 0;
+    bottom: 0;
+    margin: 20px;
+    position: absolute;
+}
+.page_section-2 .doctor-pic{
+    top: 120px;
+    left: 150px;
+}
+.page_section-2 .doctor-pic img{
+    width: 345px;
+    padding: 20px;
+    background: #fff;
+}
+.page_section-2 .wrapper h1{  
+    color: #FFAF5E;
+    top:320px;
+    right: 100px;
+}
+.page_section-2 .wrapper h5{
+    color: #FFAF5E;
+    top:300px;
+    right: 320px;
+}
+.page_section-2 h1::after{
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 6px;
+    right: 130px;
+    bottom: 0;
+    background: #FFAF5E;  
+}
+.page_section-2 .text-wrapper{
+    top:450px;
+    right: 100px;
+}
+/* 關於診所 */
+.page_section-2 .clinic-pic img{
+    width: 850px;
+}
+.page_section-2 .wrapper-2{
+    top: 800px;
+    left:500px;
+}
+.page_section-2 .text-wrapper-2 p{
+    color: #000;
+    top: 800px;
+    left: 0;
+}
+.page_section-3{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+

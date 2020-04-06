@@ -1,0 +1,678 @@
+/* ===================================== 公用 ========================================== */
+* {
+    box-sizing: border-box;
+}
+body{
+    background: rgb(255, 255, 255);
+    font-family:'Noto Sans TC', sans-serif;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+h1{
+    color:#82C28F;
+    font-size: 80px;
+    letter-spacing: 10px;
+    margin: 0 auto 15px;
+}
+@media screen and (max-width: 768px){
+    .page_section h1{
+        font-size:3rem;
+    }
+   }
+h4{
+    color: #888888;
+    letter-spacing: 3px;
+    line-height: 30px;
+}
+@media screen and (max-width: 768px){
+    h4{
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 15px;
+    }
+}
+h5{
+    color: #888888;
+    letter-spacing: 3px; 
+}
+p{
+    color: #888888;
+    letter-spacing: 2px;
+}
+@media screen and (max-width: 768px){
+    p{
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 17px;  
+        margin: 0;
+    }
+}
+.text-center{
+    text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+.align-items-center {
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+
+.justify-content-center{
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+.flex-end{
+    align-items: flex-end;
+}
+.flex-start{
+    align-items: flex-start;
+}    
+.d-inline-block{
+    display: inline-block;
+}
+.btn{
+    font-size: 20px;
+    border: 2px solid #FFAF5E;
+    border-radius: 30px;
+    padding: 5px 20px;
+    margin: 20px 0;
+    color: #FFAF5E;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+}
+.btn:hover{
+    color:#bb5d00;
+    border: 2px solid #bb5d00;
+    transition: .5s;
+}
+
+@media screen and (max-width: 768px){
+    .btn{
+        font-size: 15px;
+    }
+}
+/* ======================================= Header ===================================== */
+.logo{
+    height: 50px;
+    margin: 30px;
+}
+@media screen and (max-width: 768px){
+    .logo{
+        display: none;
+        margin: 30px 0;
+    }
+}
+nav{
+    justify-content: space-between;
+    background: rgba(255, 255, 255);
+}
+nav ul, nav ul li{
+    margin:0 0 0 56px;
+    padding:0;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a:hover{
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #82C28F;
+    transition: .5s;
+}
+nav ul li a{
+    height: 100px;
+    vertical-align: middle;
+    padding:4px 10px;
+    text-decoration: none;
+    color:#595757;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+@media screen and (max-width: 768px){
+    nav ul li{
+      display: none;
+    }
+    }
+@media screen and (max-width: 768px){
+    a .show_mobile{
+        display: block !important;
+        color: #595757;
+        padding: 40px 40px;
+        font-size: 30px;
+    }
+}
+nav.active{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+}
+/* ======================================== Menu ================================== */
+.transition{
+    transition: 0.4s;
+  }
+  .wrapper-menu{
+    width:800px;
+    margin: 20px 0;
+    margin-left: 100px;
+  }
+  .menu{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 2px;
+  }
+  .menu.active{
+    background: #fff;
+  }
+  .menu .transition{
+    position: relative;  
+  }
+  .menu ul{
+    /* position: absolute; */
+    right: 40px;
+    top:10px;
+    background:rgba(255,255,255,.8);
+    width:220px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .menu.active ul{
+    opacity: 1;
+    max-height: 500px;
+  }
+  .menu ul li a{
+    display: block;
+    padding:10px 12px;
+    color: #666;
+  }
+  .menu ul li a:hover{
+    background: #82C28F;
+    list-style: none;
+    text-decoration: none;
+  }
+  .menu ul,li{
+    list-style: none;
+    color: #666;
+    padding: 0;
+    margin: 0;
+  }
+  .bar{
+      width: 36px;
+      height: 6px;
+      background: #666;
+      margin: 6px 0;
+      border-radius: 2px;
+  }
+  .active .bar1{
+      -webkit-transform: rotate(-45deg) translate(-9px, 7px) ;
+      transform: rotate(-45deg) translate(-9px, 7px) ;
+  }
+
+  .active .bar2{opacity: 0;}
+
+  .active .bar3{
+      -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
+      transform: rotate(45deg) translate(-9px, -8px) ;
+  }
+  .show_mobile{
+    display: none !important;
+    }
+
+  .logo2{
+    margin: 20px 0;
+  }  
+  @media screen and (max-width: 768px){
+    .show_mobile{
+        display: block !important;
+      }
+  }
+     
+ /*==================================主視覺頁 ==================================*/
+ .banner{
+     max-width:1400px;
+     height: 700px;
+     margin: 0 auto;
+ }
+ @media screen and (max-width: 768px){
+    .banner{
+        height: 300px;
+    }
+ }
+
+ /*========================== 幻燈片 =========================*/
+.wrapper{
+    margin:0 auto;
+    width: 975px;
+  }
+  @media screen and (max-width: 768px){
+      .wrapper{
+        margin:0 auto;
+        width: 375px; 
+      }
+  }
+  ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .transition2{
+    transition:all .5s;
+    -webkit-transition: all .5s;
+  }
+  .slide{
+    width:975px;
+    overflow: hidden;
+    height:600px;
+    background: #000;
+    position: relative;
+  }
+  @media screen and (max-width: 768px){
+    .slide{
+    width:375px;
+    overflow: hidden;
+    height:250px;
+    background: #000;
+    position: relative;
+    }
+  }
+  .slide ul.slide_img{
+    left:0;
+    position: absolute;
+    /*width:2400px;*/
+    z-index: 1;
+    margin:0;
+    padding:0;
+  }
+  .slide ul.slide_img li{
+    width:975px;
+    float:left;
+    height:600px;
+    list-style: none;
+  }
+  @media screen and (max-width: 768px){
+    .slide ul.slide_img li{
+        width: 375px;
+        float:left;
+        height:250px;
+        list-style: none;
+    }
+  }
+  .slide ul.slide_img li img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+  .slide ul.slide_node{
+    position: absolute;
+    left:0;
+    bottom:10px;
+    width:100%;
+    text-align: center;
+    z-index: 1;
+  }
+  .slide ul.slide_node li{
+    margin:0 5px;
+    display: inline-block;
+    /* cursor: pointer; */
+    width:13px;
+    height:13px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255,.9);
+  }
+  .slide ul.slide_node li:hover, .slide ul.slide_node li.active{
+    background: #82C28F;
+  }
+  .dir_btn{
+    position: absolute;
+    top:50%;
+    margin-top: -12px;
+    color: #fff;
+    z-index: 10;
+    font-size: 24px;
+    opacity: .5;
+    cursor: pointer;
+  }
+  .dir_btn:hover{
+    opacity: .8;
+    text-decoration: none;
+    color:#fff;
+  }
+  .glyphicon-chevron-left{
+    left:5px; 
+  }
+  .glyphicon-chevron-right{
+    right:5px; 
+  }
+.banner .slider-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner h1{
+    position: absolute;
+    color: #fff;
+    font-size: 6rem;
+    font-family: 'Noto Sans TC', sans-serif,'700';
+    margin-top: 60px;
+    margin-left: 51px;
+    letter-spacing: 20px;
+    line-height: 9rem;
+}
+@media screen and (max-width: 768px){
+    .banner h1{
+    position: absolute;
+    z-index:1;
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: 'Noto Sans TC', sans-serif,'700';
+    margin-top: 15px;
+    margin-left: 10px;
+    letter-spacing: 10px;
+    line-height: 4rem;
+    }
+}
+.banner h1::after{
+    position: absolute;
+    content: "";
+    width: 600px;
+    height: 6px;
+    background: #fff;
+    right: 0;
+    top: 0;
+} */
+
+/* ===========================主治項目============================ */
+.page_section{
+padding: 150px 0;
+max-width: 1440px;
+margin: 0 auto;
+}
+@media screen and (max-width: 768px){
+.page_section{
+    height: 1300px;
+}
+}
+.page_section .wrapper{
+   width: 100%;
+   height: 140px;
+}
+@media screen and (max-width: 768px){
+.page_section .wrapper{
+    height: 80px;
+}   
+}
+.page_section h5{
+ color:#82C28F;
+ margin: 0px auto;
+}
+.page_section h1::after{
+position: absolute;
+content: "";
+width: 218px;
+height: 6px;
+left: calc(50% - 109px);
+bottom: 0;
+background: #82C28F; 
+}
+/* .page_section h1{
+transform: translateX(-300);
+opacity: 0;
+transition: .5s;
+}
+.page_section h1.active{
+transform: translateX(0);
+opacity: 1; 
+transition: .5s;
+} */
+@media screen and (max-width: 768px){
+.page_section h1::after{
+    display: none;
+}
+}
+.page_section img{
+max-width: 150px;
+margin: 10px 50px;
+}  
+.page_section .icon{
+margin: 70px auto;
+}
+.icon h5{
+color: #FFAF5E;
+}
+@media screen and (max-width: 768px){
+.page_section .icon{
+    flex-wrap: wrap;
+    max-width: 50px;
+    margin-top: 20px;
+}
+}
+/* =========================== 醫師介紹 ============================ */   
+.page_section-2{
+max-width: 1400px;
+height: 1500px;
+margin: 0 auto;
+}
+@media screen and (max-width: 768px){
+.page_section-2{
+    height: 500px
+}
+}
+.page_section-2 .box{
+ background: #E6E6E6;
+ width: 295px;
+ height: 1150px;
+ left: calc(50% - 20px);
+ top:50px;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .box{
+    display: none;
+}
+}
+.page_section-2 .box2{
+background: #82C28F;
+width: 295px;
+height: 1150px;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .box2{
+    display: none;
+}
+}
+.page_section-2 .box2{
+transform: translateX(-800px);
+/* opacity: 0; */
+transition: 1s;
+}
+.page_section-2 .box2.active{
+    transform: translateX(0);
+    /* opacity: 0; */
+    transition: 1s;
+}
+.z-indx{
+z-index: -2;
+}
+.page_section-2 .box2 p{
+color: #fff;
+font-size: 80px;
+letter-spacing: 10px;
+right: 0;
+bottom: 0;
+margin: 20px;
+position: absolute;
+}
+.page_section-2 .about-doctor{
+padding: 5rem;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .about-doctor{
+    padding:0;
+}
+}
+.page_section-2 .doctor-pic{
+top: 120px;
+left: 150px;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .doctor-pic{
+    top: 200px;
+}
+}
+
+.page_section-2 .doctor-pic img{
+width: 345px;
+padding: 20px;
+background: #fff;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .doctor-pic img{
+    width: 160px;
+    padding: 0;
+}
+}
+.page_section-2 .about-doctor-text{
+margin-top: 50px;
+}
+.page_section-2 .about-doctor h1{  
+color: #FFAF5E;    
+}
+@media screen and (max-width: 768px){
+.page_section-2 .about-doctor h1{
+    font-size: 25px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+}
+.page_section-2 .about-doctor h5{
+color: #FFAF5E;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .about-doctor h5{
+    font-size: 15px;
+    margin-bottom: 0;
+}
+}
+.page_section-2 .about-doctor h1::after{
+position: absolute;
+content: "";
+width: 600px;
+height: 6px;
+right: 130px;
+bottom: 0;
+background: #FFAF5E;  
+}
+@media screen and (max-width: 768px){
+.page_section-2 .about-doctor h1::after{
+    width: 200px;
+    height: 3px;
+    right: 10px;
+}
+}
+/* ========================== 關於診所 =========================== */
+.page_section-2 .about-clinic{
+margin-top: 300px;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .about-clinic{
+    margin-top: 30px;
+    align-items: flex-start;
+}
+}
+.show_mobile2,.show_mobile3{
+display: none !important;
+}
+@media screen and (max-width: 768px){
+.show_mobile3{
+    display: block !important;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+}
+@media screen and (max-width: 768px){
+.show_mobile2{
+    display: block !important;
+    font-size: 15px;
+    color: #82C28F;
+    margin: 50px 0 0;
+}
+}
+.page_section-2 .clinic-pic img{
+max-width: 850px;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .clinic-pic img{
+    max-width: 250px;
+    
+}
+}
+.page_section-2 .about-clinic-text{
+margin-left: 110px;
+}
+@media screen and (max-width: 768px){
+.page_section-2 .about-clinic-text{
+    margin-left:0px;
+}
+}
+/* ========================= 聯絡我們 =========================== */
+.page_section-3{
+max-width: 1400px;
+height: 800px;
+margin-top: 50px;
+}
+@media screen and (max-width: 768px){
+.page_section-3{
+    flex-wrap: wrap;
+    height: 700px;
+    margin-top: 0px;
+}
+}
+.page_section-3 .location{
+margin: 0 auto;
+}
+@media screen and (max-width: 768px){
+.page_section-3 .location{
+    width: 360px;
+    height: 200px;
+    margin-top: 180px;
+}
+}
+.page_section-3 .about-clinic{
+padding: 4rem;
+}
+@media screen and (max-width: 768px){
+.page_section-3 .about-clinic{
+    padding: 0;
+    margin:0 auto 30px;
+    text-align: center;
+}
+}
+/* ========================= Footer =========================== */
+.box{
+background: #82C28F;
+width: 100%;  
+}
+.logo-wite{
+width: 170px;
+}
+@media screen and (max-width: 768px){
+.logo-wite{
+    width: 100px;
+}
+}
+.box .info-wrapper{
+margin: 0 auto;
+padding: 30px;
+}
+@media screen and (max-width: 768px){
+.box .info-wrapper{
+    padding: 10px;
+}
+}
+.box .info p{
+color: #fff;
+}

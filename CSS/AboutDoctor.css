@@ -1,0 +1,321 @@
+* {
+    box-sizing: border-box;
+}
+/* ===================================== 公用 ====================================== */
+body{
+    background: rgb(255, 255, 255);
+    font-family:'Noto Sans TC', sans-serif;
+}
+nav{
+    background: #fff;
+}
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.text-center{
+    text-align: center;
+}
+.d-flex{
+    display: flex;
+}
+.align-items-center{
+    -ms-flex-align: center !important;
+    align-items: center !important;
+  }
+.align-items-start{
+    align-self: start;
+}
+.justify-content-center{
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+}
+.justify-content-end{
+    justify-content: end;
+}
+.flex-end{
+    align-items: flex-end;
+}  
+.d-inline-block{
+    display: inline-block;
+}
+h1{
+    font-size: 70px;
+    letter-spacing: 10px;
+}
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 40px;
+    }
+}
+/* ======================================= Header ===================================== */
+.logo{
+    height: 50px;
+    margin: 30px;
+}
+@media screen and (max-width: 768px){
+   .logo{
+    display: none;
+    margin: 30px 0;
+   } 
+}
+nav{
+    justify-content: space-between;
+    background: rgba(255, 255, 255);
+}
+nav.active{
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+}
+nav ul, nav ul li{
+    margin:0 0 0 56px;
+    padding:0;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a:hover{
+    background: rgb(255, 255, 255);
+    text-decoration: none;
+    color: #82C28F;
+    transition: .5s;
+}
+nav ul li a{
+    height: 100px;
+    vertical-align: middle;
+    padding:4px 10px;
+    text-decoration: none;
+    color:#595757;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+}
+a .show_mobile{
+    display: none !important;
+}
+@media screen and (max-width: 768px){
+    nav ul li{
+      display: none;
+    }
+    }
+@media screen and (max-width: 768px){
+    a .show_mobile{
+        display: block !important;
+        width: 40px;
+        color: #595757;
+        padding: 40px 40px;
+        font-size: 30px;
+    }
+}
+.z-indx{
+    z-index: 1;
+}
+p{
+    color: #888888;
+}
+/* ======================================== Menu ================================== */
+.transition{
+    transition: 0.4s;
+  }
+  .wrapper-menu{
+    width:800px;
+    margin: 20px 0;
+    margin-left: 100px;
+  }
+  .menu{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 0 0 2px;
+  }
+  .menu.active{
+    background: #fff;
+  }
+  .menu .transition{
+    position: relative;  
+  }
+  .menu ul{
+    /* position: absolute; */
+    right: 40px;
+    top:10px;
+    background:rgba(255,255,255,.8);
+    width:220px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .menu.active ul{
+    opacity: 1;
+    max-height: 500px;
+  }
+  .menu ul li a{
+    display: block;
+    padding:10px 12px;
+    color: #666;
+  }
+  .menu ul li a:hover{
+    background: #82C28F;
+    list-style: none;
+    text-decoration: none;
+  }
+  .menu ul,li{
+    list-style: none;
+    color: #666;
+    padding: 0;
+    margin: 0;
+  }
+  .bar{
+      width: 36px;
+      height: 6px;
+      background: #666;
+      margin: 6px 0;
+      border-radius: 2px;
+  }
+  .active .bar1{
+      -webkit-transform: rotate(-45deg) translate(-9px, 7px) ;
+      transform: rotate(-45deg) translate(-9px, 7px) ;
+  }
+
+  .active .bar2{opacity: 0;}
+
+  .active .bar3{
+      -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
+      transform: rotate(45deg) translate(-9px, -8px) ;
+  }
+  .show_mobile{
+    display: none !important;
+    }
+
+  .logo2{
+    margin: 20px 0;
+  }  
+  @media screen and (max-width: 768px){
+    .show_mobile{
+        display: block !important;
+      }
+  }
+/* ======================================= About Dcotor ===================================== */
+.about-doctor{
+    max-width:1100px;
+    margin: 0 auto;
+    height: 700px;
+}
+@media screen and (max-width: 768px){
+    .about-doctor{
+        height: 370px;
+    }
+}
+.about-doctor .wrapper{
+    padding: 4rem 4rem 0;
+}
+@media screen and (max-width: 768px){
+    .about-doctor .wrapper{
+        padding: 0;
+    }
+}
+.about-doctor .box{
+    height: 360px;
+}
+@media screen and (max-width: 768px){
+    .about-doctor .box{
+        height: 300px;
+        margin: 30px 0px;
+    }
+}
+.about-doctor img{
+    width: 330px;
+}
+@media screen and (max-width: 768px){
+    .about-doctor img{
+        width: 160px;
+    }
+}
+.about-dictor-text{
+    right: 0;
+    color:#fff;
+    margin: 20px;
+}
+.about-doctor p{
+    position:absolute;
+    right: 150px;
+}
+.wrapper-right h5,.wrapper-right h1{
+    color: #FFAF5E;
+}
+/* ======================================== 秉持的精神 =========================================== */
+.spiritural{
+    margin: 0 auto;
+    height: 700px;
+    background: #F2F2F2;
+    width: 100%;
+}
+@media screen and (max-width: 768px){
+    .spiritural{
+        height: 350px;
+    }
+}
+.spiritural .wrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 768px){
+    .spiritural .wrapper{
+        padding-top: 30px;
+    }
+}
+.pic-1{
+  width: 370px;
+  height: 555px;
+  margin: 10px;
+}
+@media screen and (max-width: 768px){
+    .pic-1{
+        width: 150px;
+        height: 255px;
+    }
+}
+.wrapper-right{
+    margin: 10px;
+}
+@media screen and (max-width: 768px){
+    .wrapper-right h1{
+        font-size: 50px;
+    }
+}
+.pic-2{
+    width: 475px;
+    height: 372px;
+}
+@media screen and (max-width: 768px){
+    .pic-2{
+        display: none;
+    }
+}
+/* ======================================== Footer =========================================== */
+.box{
+    background: #82C28F;
+    width: 100%;
+}
+.logo-wite{
+    width: 170px;
+}
+@media screen and (max-width: 768px){
+    .logo-wite{
+        width: 100px;
+    }
+}
+.box .info-wrapper{
+    margin: 0 auto;
+    padding: 20px;
+}
+@media screen and (max-width: 768px){
+    .box .info-wrapper{
+        padding: 10px;
+    }
+}
+.box .info p{
+    color: #fff;
+    font-size: 14px;
+}
